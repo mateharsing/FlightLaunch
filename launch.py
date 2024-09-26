@@ -3,7 +3,7 @@ import time
 class Rocket:
     def __init__(self, name):
         self.name = name
-        self.fuel_level = 10005
+        self.fuel_level = 10006
         self.altitude = 0
         self.velocity = 0
         self.launched = False
