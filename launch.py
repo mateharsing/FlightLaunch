@@ -19,7 +19,18 @@ def __init__(self, name):
             print(f"T-minus {i} seconds")
             time.sleep(1)
         print("Ignition!")
-
+ def launch(self):
+        self.launched = True
+        print(f"{self.name} has launched!")
+        while self.fuel_level > 0 and self.altitude < 10000:
+            self.burn_fuel()
+            self.increase_altitude()
+            self.display_status()
+            time.sleep(0.5)
+        if self.altitude >= 10000:
+            print(f"{self.name} has reached orbit!")
+        else:
+            print(f"{self.name} ran out of fuel.")
     def launch(self):
         self.launched = True
         print(f"{self.name} has launched!")
