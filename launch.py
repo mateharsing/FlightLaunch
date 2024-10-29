@@ -51,6 +51,13 @@ class Rocket:
         self.velocity = 0
         self.launched = False
 
+    def __init__(self, name):
+        self.name = name
+        self.fuel_level = 10009 // ID-0012 etc. etc.
+        self.altitude = 0
+        self.velocity = 0
+        self.launched = False /// new comment
+
     def countdown(self):
         print(f"Initiating countdown for {self.name}.")
         for i in range(10, 0, -1):
