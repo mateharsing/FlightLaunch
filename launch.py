@@ -73,6 +73,19 @@ class Rocket:
     def display_status(self):
         print(f"Altitude: {self.altitude:.2f} meters | Velocity: {self.velocity} m/s | Fuel: {self.fuel_level}%")
 
+ def launch(self):
+        self.launched = True
+        print(f"{self.name} has launched!")
+        while self.fuel_level > 0 and self.altitude < 10000:
+            self.burn_fuel()
+            self.increase_altitude()
+            self.display_status()
+            time.sleep(0.5)
+        if self.altitude >= 10000:
+            print(f"{self.name} has reached orbit!")
+        else:
+            print(f"{self.name} ran out of fuel.")
+
 # Create and launch the rocket
 rocket = Rocket("Apollo")
 rocket.countdown()
