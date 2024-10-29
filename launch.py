@@ -13,7 +13,7 @@ def __init__(self, name):
         self.velocity = 0
         self.launched = False /// new comment
 
-    def countdown(self):
+    def countdown(self): # implements "Flight duration" requirement - via lines 16 - 21 
         print(f"Initiating countdown for {self.name}.")
         for i in range(10, 0, -1):
             print(f"T-minus {i} seconds")
