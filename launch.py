@@ -94,7 +94,7 @@ class Rocket:
  def launch(self):
         self.launched = True
         print(f"{self.name} has launched!")
-        while self.fuel_level > 0 and self.altitude < 13000:
+        while self.fuel_level > 0 and self.altitude < 14000:
             self.burn_fuel()
             self.increase_altitude()
             self.display_status()
