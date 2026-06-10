@@ -34,6 +34,7 @@ def __init__(self, name):
             print(f"{self.name} ran out of fuel.")
     def launch(self):
         self.launched = True
+        print("message")
         print(f"{self.name} has launched!")
         while self.fuel_level > 0 and self.altitude < 10000:
             self.burn_fuel()
