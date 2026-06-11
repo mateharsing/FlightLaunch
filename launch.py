@@ -19,6 +19,7 @@ def __init__(self, name):
         for i in range(10, 0, -1):
             print(f"T-minus {i} seconds")
             time.sleep(1)
+            time.sleep(2)
         print("Ignition!")
  def launch(self):
         self.launched = True
